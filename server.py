@@ -4,20 +4,29 @@ from flask import Flask, \
     redirect, render_template, request
 
 app = Flask(__name__)
+data = {"dota": {}}
 
 
 @app.route("/", methods=["POST", "GET"])
 def index():
     if request.method == "POST":
         print("[+] Data recived")
-
-        json_data = json.loads(request.data)
-        with open("info.json", "w") as info_file:
-            json.dump(json_data, info_file)
+        data["dota"] = json.loads(request.data)
         
-    return "0"
+        return flask.jsonify({"code": 200, "response": 1})
+
+    else:
+        return flask.jsonify({"code": 405, "error": "method not allowed"})
+
+@app.route("/debug")
+def debug():
+    return flask.jsonify(data["dota"])
+
+@app.route("/debug/<column>")
+def debug_(column):
+    return flask.jsonify(data["dota"][column])
 
 
-if __name__ == "__main__":
+def polling():
     print("[+] Server started")
     app.run(port=6768)
