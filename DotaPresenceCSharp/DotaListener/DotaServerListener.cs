@@ -5,13 +5,14 @@ using Newtonsoft.Json.Linq;
 
 namespace DotaListener
 {
-    public static class DotaListener
+    public class DotaServerListener
     {
-        public delegate void ProcessHandler(HttpListenerContext context);
-
-        public static event ProcessHandler onRequest = ProcessRequest;
+        public DotaServerListener()
+        {
+            
+        }
         
-        public static void Start()
+        public void Start()
         {
             var listener = new HttpListener();
             listener.Prefixes.Add("http://localhost:6768/");
@@ -28,13 +29,10 @@ namespace DotaListener
             listener.Close();
         }
 
-        private static void ProcessRequest(HttpListenerContext context)
+        private void ProcessRequest(HttpListenerContext context)
         {
             // Get the data from the HTTP stream
-            var res = JObject.Parse(new StreamReader(context.Request.InputStream).ReadToEnd());
-
-            Console.WriteLine(res);
-            Console.WriteLine(res["provider"]);
+            // onRequest?.Invoke(JObject.Parse(new StreamReader(context.Request.InputStream).ReadToEnd()));
         }
     }
 }
