@@ -1,5 +1,5 @@
 /.idea/
-/__pycache__/
+/DotaPresencePython/__pycache__/
 
 /DotaPresenceCSharp/.idea/
 /DotaPresenceCSharp/DotaListener/bin/
