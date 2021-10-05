@@ -1,23 +1,15 @@
 {
-    "buildings": {
-        "radiant": {
-            "dota_goodguys_tower1_mid": {
-                "health": 1800,
-                "max_health": 1800
-            }
-        }
-    },
     "provider": {
         "name": "Dota 2",
         "appid": 570,
         "version": 47,
-        "timestamp": 1633336969
+        "timestamp": 1633423038
     },
     "map": {
         "name": "hero_demo_main",
         "matchid": "0",
-        "game_time": 2517,
-        "clock_time": 2516,
+        "game_time": 181,
+        "clock_time": 180,
         "daytime": true,
         "nightstalker_night": false,
         "game_state": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
@@ -30,41 +22,43 @@
         "steamid": "76561199190258983",
         "name": "cxldxice",
         "activity": "playing",
-        "kills": 0,
-        "deaths": 2,
+        "kills": 9,
+        "deaths": 3,
         "assists": 0,
-        "last_hits": 2,
+        "last_hits": 0,
         "denies": 0,
-        "kill_streak": 0,
-        "commands_issued": 711,
-        "kill_list": {},
+        "kill_streak": 9,
+        "commands_issued": 294,
+        "kill_list": {
+            "victimid_1": 9
+        },
         "team_name": "radiant",
         "gold": 99999,
-        "gold_reliable": 3062,
-        "gold_unreliable": 96937,
-        "gold_from_hero_kills": 0,
-        "gold_from_creep_kills": 79,
-        "gold_from_income": 4555,
-        "gold_from_shared": 0,
-        "gpm": 4054,
-        "xpm": 302
+        "gold_reliable": 58,
+        "gold_unreliable": 99941,
+        "gold_from_hero_kills": 4138,
+        "gold_from_creep_kills": 0,
+        "gold_from_income": 300,
+        "gold_from_shared": 2526,
+        "gpm": 63683,
+        "xpm": 1516
     },
     "hero": {
-        "xpos": -2245,
-        "ypos": -1945,
-        "id": 74,
-        "name": "npc_dota_hero_invoker",
-        "level": 30,
-        "xp": 56045,
+        "xpos": -1711,
+        "ypos": 544,
+        "id": 34,
+        "name": "npc_dota_hero_tinker",
+        "level": 14,
+        "xp": 9805,
         "alive": true,
         "respawn_seconds": 0,
-        "buyback_cost": 10234,
+        "buyback_cost": 8492,
         "buyback_cooldown": 0,
-        "health": 2795,
-        "max_health": 2795,
+        "health": 1480,
+        "max_health": 1480,
         "health_percent": 100,
-        "mana": 3334,
-        "max_mana": 3334,
+        "mana": 1203,
+        "max_mana": 1203,
         "mana_percent": 100,
         "silenced": false,
         "stunned": false,
@@ -73,182 +67,29 @@
         "hexed": false,
         "muted": false,
         "break": false,
-        "aghanims_scepter": true,
+        "aghanims_scepter": false,
         "aghanims_shard": false,
         "smoked": false,
         "has_debuff": false,
         "talent_1": false,
-        "talent_2": true,
-        "talent_3": true,
-        "talent_4": true,
-        "talent_5": true,
-        "talent_6": true,
-        "talent_7": true,
-        "talent_8": true
-    },
-    "abilities": {
-        "ability0": {
-            "name": "invoker_quas",
-            "level": 7,
-            "can_cast": true,
-            "passive": false,
-            "ability_active": true,
-            "cooldown": 0,
-            "ultimate": false
-        },
-        "ability1": {
-            "name": "invoker_wex",
-            "level": 7,
-            "can_cast": true,
-            "passive": false,
-            "ability_active": true,
-            "cooldown": 0,
-            "ultimate": false
-        },
-        "ability2": {
-            "name": "invoker_exort",
-            "level": 7,
-            "can_cast": true,
-            "passive": false,
-            "ability_active": true,
-            "cooldown": 0,
-            "ultimate": false
-        },
-        "ability3": {
-            "name": "invoker_chaos_meteor",
-            "level": 1,
-            "can_cast": true,
-            "passive": false,
-            "ability_active": true,
-            "cooldown": 0,
-            "ultimate": false
-        },
-        "ability4": {
-            "name": "invoker_tornado",
-            "level": 1,
-            "can_cast": true,
-            "passive": false,
-            "ability_active": true,
-            "cooldown": 0,
-            "ultimate": false
-        },
-        "ability5": {
-            "name": "invoker_invoke",
-            "level": 1,
-            "can_cast": true,
-            "passive": false,
-            "ability_active": true,
-            "cooldown": 0,
-            "ultimate": true
-        },
-        "ability6": {
-            "name": "plus_high_five",
-            "level": 1,
-            "can_cast": true,
-            "passive": false,
-            "ability_active": true,
-            "cooldown": 0,
-            "ultimate": false
-        }
-    },
-    "items": {
-        "slot0": {
-            "name": "item_bloodthorn",
-            "purchaser": 0,
-            "can_cast": true,
-            "cooldown": 0,
-            "passive": false
-        },
-        "slot1": {
-            "name": "item_sheepstick",
-            "purchaser": 0,
-            "can_cast": true,
-            "cooldown": 0,
-            "passive": false
-        },
-        "slot2": {
-            "name": "item_refresher",
-            "purchaser": 0,
-            "can_cast": true,
-            "cooldown": 0,
-            "passive": false
-        },
-        "slot3": {
-            "name": "item_arcane_blink",
-            "purchaser": 0,
-            "can_cast": true,
-            "cooldown": 0,
-            "passive": false
-        },
-        "slot4": {
-            "name": "item_ultimate_scepter",
-            "purchaser": 0,
-            "passive": true
-        },
-        "slot5": {
-            "name": "item_travel_boots",
-            "purchaser": 0,
-            "passive": true
-        },
-        "slot6": {
-            "name": "empty"
-        },
-        "slot7": {
-            "name": "empty"
-        },
-        "slot8": {
-            "name": "empty"
-        },
-        "stash0": {
-            "name": "empty"
-        },
-        "stash1": {
-            "name": "empty"
-        },
-        "stash2": {
-            "name": "empty"
-        },
-        "stash3": {
-            "name": "empty"
-        },
-        "stash4": {
-            "name": "empty"
-        },
-        "stash5": {
-            "name": "empty"
-        },
-        "teleport0": {
-            "name": "item_tpscroll",
-            "purchaser": 0,
-            "can_cast": true,
-            "cooldown": 0,
-            "passive": false,
-            "charges": 1
-        },
-        "neutral0": {
-            "name": "empty"
-        }
-    },
-    "draft": {},
-    "wearables": {
-        "wearable0": 99,
-        "wearable1": 89,
-        "wearable2": 98,
-        "wearable3": 48,
-        "wearable4": 100,
-        "wearable5": 8626,
-        "wearable6": 305,
-        "wearable7": 8632,
-        "wearable8": 683,
-        "wearable9": 14912
+        "talent_2": false,
+        "talent_3": false,
+        "talent_4": false,
+        "talent_5": false,
+        "talent_6": false,
+        "talent_7": false,
+        "talent_8": false
     },
     "previously": {
         "map": {
-            "clock_time": 2515
+            "game_time": 166,
+            "clock_time": 165
         },
         "player": {
-            "gold_from_income": 4554,
-            "gpm": 4055
+            "commands_issued": 291,
+            "gold_from_income": 275,
+            "gpm": 69514,
+            "xpm": 1655
         }
     }
 }
