@@ -39,10 +39,10 @@ def main():
         data = server.get_data()
         is_closed = server.get_connection_status()
 
-        print(is_open, is_closed, len(data))
+        print(is_open, is_closed, len(data), data.keys())
 
         # Проверка на нахождение пользователя в игре(в запросе 5 элементов)
-        if is_open and not is_closed and len(data) == 5:
+        if is_open and not is_closed and len(data) > 3:
             # Получение имени текущего героя
             current_hero_name = heroes_names_dict[data['hero']['name']]
             current_game_map = ''
@@ -58,6 +58,7 @@ def main():
             # Обновление статуса
             rpc.update(
                 large_image=data['hero']['name'], large_text=current_hero_name,
+                small_image=str(data['hero']['level']), small_text="Level " + str(data['hero']['level']),
                 state=str(data["player"]["kills"]) + "/" + str(data["player"]["deaths"]) + "/" + str(
                     data["player"]["assists"]) + "; GPM/XPM: " + str(data["player"]["gpm"]) + "/" + str(
                     data["player"]["xpm"]),
