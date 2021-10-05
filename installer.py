@@ -1,5 +1,5 @@
 config_data = \
-"""DotaPresence  Configuration"
+""""DotaPresence  Configuration"
 {
     "uri"               "http://localhost:6768/"
     "timeout"           "15.0"
