@@ -8,7 +8,7 @@ import server
 
 
 # проверка открыта ли дота
-def dota_is_open():
+def is_open():
     try:
         pymem.Pymem("dota2.exe")
         return True
