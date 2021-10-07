@@ -137,6 +137,7 @@ def main():
                 
             time.sleep(15)
         else:
+            rich_presence.clear()
             time.sleep(60)
 
 
