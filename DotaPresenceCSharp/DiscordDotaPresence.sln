@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordDotaPresence", "DiscordDotaPresence\DiscordDotaPresence.csproj", "{36326E70-4C33-48D4-8E6B-0A4DE9FD095F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaHandler", "DotaHandler\DotaHandler.csproj", "{7927B868-392B-4450-9586-99A2E975EA53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataHttpSender", "DataHttpSender\DataHttpSender.csproj", "{4A181BE9-0D39-4259-8084-1885EEC00D4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36326E70-4C33-48D4-8E6B-0A4DE9FD095F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36326E70-4C33-48D4-8E6B-0A4DE9FD095F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36326E70-4C33-48D4-8E6B-0A4DE9FD095F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36326E70-4C33-48D4-8E6B-0A4DE9FD095F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7927B868-392B-4450-9586-99A2E975EA53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7927B868-392B-4450-9586-99A2E975EA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7927B868-392B-4450-9586-99A2E975EA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7927B868-392B-4450-9586-99A2E975EA53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A181BE9-0D39-4259-8084-1885EEC00D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A181BE9-0D39-4259-8084-1885EEC00D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A181BE9-0D39-4259-8084-1885EEC00D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A181BE9-0D39-4259-8084-1885EEC00D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

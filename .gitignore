@@ -1,10 +1,15 @@
 /.idea/
+/__pycache__/
+
+/DotaPresencePython/
 /DotaPresencePython/__pycache__/
 
 /DotaPresenceCSharp/.idea/
-/DotaPresenceCSharp/DotaListener/bin/
-/DotaPresenceCSharp/DotaListener/obj/
-/DotaPresenceCSharp/DotaPresenceCSharp/bin/
-/DotaPresenceCSharp/DotaPresenceCSharp/obj/
+/DotaPresenceCSharp/DataHttpSender/bin/
+/DotaPresenceCSharp/DataHttpSender/obj/
+/DotaPresenceCSharp/DiscordDotaPresence/bin/
+/DotaPresenceCSharp/DiscordDotaPresence/obj/
+/DotaPresenceCSharp/DotaHandler/bin/
+/DotaPresenceCSharp/DotaHandler/obj/
 
 /DotaPresencePython/.idea/

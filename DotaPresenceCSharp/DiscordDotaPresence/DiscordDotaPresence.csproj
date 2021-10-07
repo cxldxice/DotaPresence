@@ -7,11 +7,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <ProjectReference Include="..\DotaHandler\DotaHandler.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DotaListener\DotaListener.csproj" />
+      <PackageReference Include="DiscordRichPresence" Version="1.0.175" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources" />
     </ItemGroup>
 
 </Project>
