@@ -14,7 +14,7 @@ def main():
     try:
         update = False
     
-        current_version = requests.get("https//github.com/cxldxice/DotaPresence/blob/main/app.info?raw=True").json()
+        current_version = requests.get("https://github.com/cxldxice/DotaPresence/blob/main/app.info?raw=True").json()
         
         if os.path.exists(PROJECT):
             try:
@@ -33,7 +33,7 @@ def main():
             update = True
 
         if update:
-            app = requests.get(f"https//github.com/cxldxice/DotaPresence/blob/main/builds/{current_version}/DotaPresence.exe?raw=True").content
+            app = requests.get(f"https://github.com/cxldxice/DotaPresence/blob/main/builds/{current_version}/DotaPresence.exe?raw=True").content
 
             with open(PROJECT + "/DotaPresence.exe", "wb") as app_path:
                 app_path.write(app)
