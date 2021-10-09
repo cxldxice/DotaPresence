@@ -25,7 +25,7 @@ def main():
 
     try:
         print(f"[+] {words['dl_process'][lang_key]}")
-        updater = requests.get("https://github.com/cxldxice/DotaPresence/blob/main/builds/DotaPrsenceUpdater.exe?raw=True").content
+        updater = requests.get("https://github.com/cxldxice/DotaPresence/blob/main/builds/DotaPresenceUpdater.exe?raw=True").content
     except Exception as e:
         print(e)
         print(f"[-] {words['dl_process_error'][lang_key]}")
@@ -44,7 +44,7 @@ def main():
         input("[!] Press enter to exit")
         return
 
-    os.system('"{STARTUP}/DotaPresenceUpdater.exe"')
+    os.system(f'"{STARTUP}/DotaPresenceUpdater.exe"')
     print(f"[+] {words['success'][lang_key]}")
     input("[!] Press enter to exit")
     return
