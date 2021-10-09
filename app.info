@@ -1,0 +1,9 @@
+{
+    "name": "DotaPresence",
+    "version": 1.0,
+    "authors": [
+            "cxldxice", 
+            "Xorsiphus"
+        ],
+    "download": "https://github.com/cxldxice/DotaPresence/blob/main/builds/DotaPresenceUpdater.exe?raw=True"
+}
