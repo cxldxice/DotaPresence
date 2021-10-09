@@ -44,7 +44,7 @@ def main():
         input("[!] Press enter to exit")
         return
 
-    os.system(STARTUP + "/DotaPresenceUpdater.exe")
+    os.system('"{STARTUP}/DotaPresenceUpdater.exe"')
     print(f"[+] {words['success'][lang_key]}")
     input("[!] Press enter to exit")
     return
