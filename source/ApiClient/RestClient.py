@@ -1,4 +1,5 @@
 import requests
+import json
 
 from ShiftCipher import full_encode
 
@@ -9,9 +10,9 @@ class RestClient:
     def get_link(state: str) -> str:
         match state:
             case "Dev":
-                return "https://localhost:5001/api/Auth"
+                return "https://localhost:5001/api/Matches/Add"
             case "Prod":
-                return "https://123.123.123.123:5001/api/Auth"
+                return "https://123.123.123.123:5001/api/Matches/Add"
             case _:
                 return ""
 
@@ -34,19 +35,26 @@ class RestClient:
             return 500
 
         transfer = {
-            'steamId': steam_id,
+            'steam3Id': steam_id,
             'matchId': match_id,
-            'data': full_encode(str(data), str(match_id - steam_id))
+            # Шифрование сообщения, чтобы нельзя было подменить по api
+            'data': full_encode("(authentic string)->" + str(data).replace("True", "true").replace("False", "false"),
+                                str(match_id - steam_id))
         }
 
         try:
             res = requests.post(RestClient.get_link(state), json=transfer, verify=False)
+            if res.status_code != 200:
+                print(res.text)
             return res.status_code
 
         except requests.RequestException as e:
-            print(e.args[0])
+            if len(e.args) > 0:
+                print(e.args[0])
             return 500
 
 
 # Test
-print(RestClient.send({"player": {"steamid": 76561197965742086}, "map": {"matchid": 123412341212}}, 'Dev'))
+f = open('info.json')
+data_from_json = json.load(f)
+print(RestClient.send(data_from_json, 'Dev'))
