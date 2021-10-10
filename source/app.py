@@ -26,6 +26,7 @@ rich_presence.connect()
 logging.getLogger('werkzeug').setLevel(logging.ERROR)  # disable logs from flask
 
 data = {"dota": {}, "update": start, "game": False}
+env = "Dev"  # "Dev" | "Prod"
 
 
 @server.route("/", methods=["POST", "GET"])
@@ -142,8 +143,9 @@ def main():
                 )
 
             # Где то тут будет проверка на сорев матч и отправка на сервер раз в минуту
-            # if counter == 3:
-            #     RestClient.send(data["dota"], "Dev")
+            # if  counter == 3:
+            #     RestClient.test_connection(env)
+            #     RestClient.send(data["dota"], env)
             #     counter = (counter + 1) % 4
 
             time.sleep(15)

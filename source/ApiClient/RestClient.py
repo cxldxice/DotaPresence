@@ -7,12 +7,12 @@ from ShiftCipher import full_encode
 class RestClient:
 
     @staticmethod
-    def get_link(state: str) -> str:
+    def get_link_base(state: str) -> (str, bool, int):
         match state:
             case "Dev":
-                return "https://localhost:5001/api/Matches/Add"
+                return "https://localhost:5001/api/", False, 60
             case "Prod":
-                return "https://123.123.123.123:5001/api/Matches/Add"
+                return "https://123.123.123.123:5001/api/", True, 3
             case _:
                 return ""
 
@@ -32,7 +32,7 @@ class RestClient:
             match_id = int(data["map"]["matchid"])
         except requests.RequestException as e:
             print(e)
-            return 500
+            return 400
 
         transfer = {
             'steam3Id': steam_id,
@@ -43,7 +43,8 @@ class RestClient:
         }
 
         try:
-            res = requests.post(RestClient.get_link(state), json=transfer, verify=False)
+            link_base, verification, timeout = RestClient.get_link_base(state)
+            res = requests.post(link_base + "Matches/Add", json=transfer, verify=verification, timeout=timeout)
             if res.status_code != 200:
                 print(res.text)
             return res.status_code
@@ -51,10 +52,25 @@ class RestClient:
         except requests.RequestException as e:
             if len(e.args) > 0:
                 print(e.args[0])
-            return 500
+            return 503
+
+    @staticmethod
+    def test_connection(state: str) -> int:
+        try:
+            link_base, verification, timeout = RestClient.get_link_base(state)
+            res = requests.get(link_base + "Auth", verify=verification, timeout=timeout)
+            if res.status_code != 200:
+                print(res.text)
+            return res.status_code
+
+        except requests.RequestException as e:
+            if len(e.args) > 0:
+                print(e.args[0])
+            return 503
 
 
 # Test
-f = open('info.json')
-data_from_json = json.load(f)
-print(RestClient.send(data_from_json, 'Dev'))
+# f = open('info.json')
+# data_from_json = json.load(f)
+# print(RestClient.test_connection('Dev'))
+# print(RestClient.send(data_from_json, 'Dev'))
